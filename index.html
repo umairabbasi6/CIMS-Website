@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIMS - Capital Institute of Para Medical Sciences</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="h3">CIMS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faculty">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#programs">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#campus-life">Campus Life</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/y4EFbGKQvAM?autoplay=1&mute=1&loop=1&playlist=y4EFbGKQvAM&controls=0&showinfo=0&rel=0" 
+                frameborder="0" 
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+            </iframe>
+        </div>
+        <div class="hero-overlay">
+            <div class="container text-center text-white">
+                <h1>Welcome to CIMS</h1>
+                <p class="lead">Capital Institute of Para Medical Sciences</p>
+                <a href="#programs" class="btn btn-primary btn-lg">Explore Programs</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About CIMS</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Dean's Message</h3>
+                    <p>Welcome to Capital Institute of Para Medical Sciences (CIMS). Our institution is dedicated to providing quality education in the field of paramedical sciences. We strive to create healthcare professionals who will serve the community with dedication and expertise.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90bo1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded" alt="Professional medical educator in academic setting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Programs</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="program-card">
+                        <h3>FSc Medical Technology</h3>
+                        <p>Learn the fundamentals of medical laboratory technology and gain hands-on experience with modern equipment.</p>
+                        <a href="programs.html#fsc-mt" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="program-card">
+                        <h3>BS-MT (4 Years)</h3>
+                        <p>Develop advanced skills in medical technology with our comprehensive bachelor's program.</p>
+                        <a href="programs.html#bs-mt" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="program-card">
+                        <h3>LHV/CNA Program</h3>
+                        <p>Train to become a qualified Lady Health Visitor or Certified Nursing Assistant.</p>
+                        <a href="programs.html#lhv-cna" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="program-card">
+                        <h3>Dispenser Course</h3>
+                        <p>Learn pharmaceutical dispensing and medication management in our specialized program.</p>
+                        <a href="programs.html#dispenser" class="btn btn-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Faculty</h2>
+            <div id="facultyCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="faculty-card text-center">
+                                    <div class="faculty-image">
+                                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
+                                    </div>
+                                    <h4 class="mt-3">Dr. Sarah Ahmed</h4>
+                                    <p class="text-muted">Head of Department</p>
+                                    <p>Medical Laboratory Technology</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="faculty-card text-center">
+                                    <div class="faculty-image">
+                                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
+                                    </div>
+                                    <h4 class="mt-3">Dr. Michael Khan</h4>
+                                    <p class="text-muted">Associate Professor</p>
+                                    <p>Clinical Sciences</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="faculty-card text-center">
+                                    <div class="faculty-image">
+                                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
+                                    </div>
+                                    <h4 class="mt-3">Prof. Lisa Wilson</h4>
+                                    <p class="text-muted">Assistant Professor</p>
+                                    <p>Nursing Sciences</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="faculty-card text-center">
+                                    <div class="faculty-image">
+                                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
+                                    </div>
+                                    <h4 class="mt-3">Dr. John Davis</h4>
+                                    <p class="text-muted">Associate Professor</p>
+                                    <p>Clinical Pathology</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="faculty-card text-center">
+                                    <div class="faculty-image">
+                                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
+                                    </div>
+                                    <h4 class="mt-3">Dr. Emma Thompson</h4>
+                                    <p class="text-muted">Assistant Professor</p>
+                                    <p>Hematology</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="faculty-card text-center">
+                                    <div class="faculty-image">
+                                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
+                                    </div>
+                                    <h4 class="mt-3">Prof. David Chen</h4>
+                                    <p class="text-muted">Associate Professor</p>
+                                    <p>Biochemistry</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#facultyCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#facultyCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#facultyCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#facultyCarousel" data-bs-slide-to="1"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Facilities</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <img src="https://images.unsplash.com/photo-1581093458791-4b41ce2d250a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Clinical Laboratory" class="facility-image">
+                        <div class="facility-content">
+                            <h3>Clinical Laboratory</h3>
+                            <p>State-of-the-art clinical testing and research facilities equipped with modern instruments and technology.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Pathology Lab" class="facility-image">
+                        <div class="facility-content">
+                            <h3>Pathology Lab</h3>
+                            <p>Modern pathology and diagnostic equipment for comprehensive medical testing and analysis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Operation Theater" class="facility-image">
+                        <div class="facility-content">
+                            <h3>Operation Theater</h3>
+                            <p>Well-equipped operation theater for practical training and surgical procedures.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <img src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Computer Lab" class="facility-image">
+                        <div class="facility-content">
+                            <h3>Computer Lab</h3>
+                            <p>Modern computer laboratory with latest software for medical research and data analysis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Library" class="facility-image">
+                        <div class="facility-content">
+                            <h3>Library</h3>
+                            <p>Extensive collection of medical books, journals, and digital resources for research and study.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Smart Classrooms" class="facility-image">
+                        <div class="facility-content">
+                            <h3>Smart Classrooms</h3>
+                            <p>Technology-enabled classrooms for interactive learning and digital education.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Life Section -->
+    <section id="campus-life" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Campus Life & Activities</h2>
+            <div id="campusCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 1.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Student Activities</h4>
+                                        <p>Engaging in various extracurricular activities</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 2.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Sports Events</h4>
+                                        <p>Regular sports competitions and fitness activities</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 3.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Cultural Events</h4>
+                                        <p>Celebrating diversity through cultural programs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 4.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Workshops</h4>
+                                        <p>Regular skill development workshops</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 5.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Seminars</h4>
+                                        <p>Expert talks and educational seminars</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 6.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Community Service</h4>
+                                        <p>Giving back to the community</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 7.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Research Activities</h4>
+                                        <p>Hands-on research experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 8.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Laboratory Work</h4>
+                                        <p>Practical laboratory sessions</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 9.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Guest Lectures</h4>
+                                        <p>Learning from industry experts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 10.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Student Projects</h4>
+                                        <p>Innovative student initiatives</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 11.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Campus Events</h4>
+                                        <p>Engaging campus activities</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="campus-card">
+                                    <img src="images/campus life 12.jpg" alt="Campus Life">
+                                    <div class="campus-content">
+                                        <h4>Student Life</h4>
+                                        <p>Daily life at CIMS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#campusCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#campusCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Muhajar Camp Road Domail Syedan, Garhi Pan Domel Rd, Muzaffarabad, AJK 13100</p>
+                        <p><i class="fas fa-phone"></i> (058224) 46537</p>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.1234567890123!2d73.47083!3d34.37083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDIyJzE1LjAiTiA3M8KwMjgnMTUuMCJF!5e0!3m2!1sen!2s!4v1234567890123" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Capital Institute of Para Medical Sciences</h5>
+                    <p>Providing quality education in medical sciences since establishment.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Follow Us</h5>
+                    <a href="https://www.facebook.com/cimsmzd/" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

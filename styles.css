@@ -1,0 +1,455 @@
+/* Global Styles */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-container iframe {
+        height: 56.25vw;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-container iframe {
+        width: 177.78vh;
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.hero-overlay h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-overlay .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* About Section */
+#about img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Campus Life Section */
+.campus-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+    position: relative;
+}
+
+.campus-card:hover {
+    transform: translateY(-10px);
+}
+
+.campus-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.campus-card:hover img {
+    transform: scale(1.1);
+}
+
+.campus-content {
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+}
+
+.campus-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.campus-content p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+#campusCarousel {
+    padding-bottom: 50px;
+}
+
+#campusCarousel .carousel-control-prev,
+#campusCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+#campusCarousel .carousel-control-prev {
+    left: -50px;
+}
+
+#campusCarousel .carousel-control-next {
+    right: -50px;
+}
+
+#campusCarousel .carousel-control-prev:hover,
+#campusCarousel .carousel-control-next:hover {
+    opacity: 1;
+}
+
+#campusCarousel .carousel-indicators {
+    bottom: -40px;
+}
+
+#campusCarousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    margin: 0 5px;
+}
+
+#campusCarousel .carousel-indicators button.active {
+    opacity: 1;
+}
+
+/* Facilities Section */
+.facility-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+    position: relative;
+}
+
+.facility-card:hover {
+    transform: translateY(-10px);
+}
+
+.facility-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover .facility-image {
+    transform: scale(1.1);
+}
+
+.facility-content {
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+}
+
+.facility-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.facility-content p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Programs Section */
+.program-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+}
+
+.program-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.program-card .btn {
+    margin-top: 1rem;
+}
+
+/* Faculty Section */
+#facultyCarousel {
+    position: relative;
+    padding: 0 50px;
+}
+
+#facultyCarousel .carousel-control-prev,
+#facultyCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+#facultyCarousel .carousel-control-prev {
+    left: 0;
+}
+
+#facultyCarousel .carousel-control-next {
+    right: 0;
+}
+
+#facultyCarousel .carousel-control-prev:hover,
+#facultyCarousel .carousel-control-next:hover {
+    opacity: 1;
+}
+
+#facultyCarousel .carousel-indicators {
+    bottom: -40px;
+}
+
+#facultyCarousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    margin: 0 5px;
+}
+
+#facultyCarousel .carousel-indicators button.active {
+    opacity: 1;
+}
+
+.faculty-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 40px;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+}
+
+.faculty-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+}
+
+.faculty-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.faculty-card:hover .faculty-image img {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact-info i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contact-form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Image Optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    loading: lazy;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 400px;
+    }
+    
+    .facility-image,
+    .campus-card img {
+        height: 200px;
+    }
+    
+    .faculty-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    #facilitiesCarousel .carousel-item {
+        height: 300px;
+    }
+    
+    .program-card,
+    .faculty-card {
+        padding: 1.5rem;
+    }
+    
+    .hero-overlay h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-overlay .lead {
+        font-size: 1.2rem;
+    }
+    
+    .facility-card img {
+        height: 200px;
+    }
+    
+    .campus-life-card img {
+        height: 250px;
+    }
+    
+    #facultyCarousel {
+        padding: 0 30px;
+    }
+    
+    .facility-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .campus-content h4 {
+        font-size: 1.2rem;
+    }
+
+    #campusCarousel .carousel-control-prev,
+    #campusCarousel .carousel-control-next {
+        display: none;
+    }
+}
+
+/* Program Details Page */
+.program-detail-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.program-detail-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.program-info-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.program-info-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.program-info-card ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+}
+
+footer a {
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
