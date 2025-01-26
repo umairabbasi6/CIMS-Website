@@ -79,8 +79,89 @@ facilityCards.forEach(card => {
     });
 });
 
-// Initialize Bootstrap tooltips
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
+// Image lazy loading with preloading
+document.addEventListener('DOMContentLoaded', function() {
+    // Preload images that are close to viewport
+    const preloadImages = () => {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                        }
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            }, {
+                rootMargin: '100px 0px', // Increased margin for earlier loading
+                threshold: 0.01 // Lower threshold for faster trigger
+            });
+
+            images.forEach(img => {
+                imageObserver.observe(img);
+            });
+        } else {
+            // Fallback for browsers that don't support IntersectionObserver
+            images.forEach(img => {
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                img.classList.add('loaded');
+            });
+        }
+    };
+
+    // Start preloading images
+    preloadImages();
+
+    // Optimize carousel transitions
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+        const instance = new bootstrap.Carousel(carousel, {
+            interval: 5000,
+            pause: 'hover'
+        });
+
+        // Preload next slide images
+        carousel.addEventListener('slide.bs.carousel', function(e) {
+            const nextSlide = e.relatedTarget;
+            const images = nextSlide.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+            });
+        });
+    });
+});
+
+// Performance optimizations
+document.addEventListener('DOMContentLoaded', function() {
+    // Defer non-critical scripts
+    const deferScripts = () => {
+        const scripts = document.querySelectorAll('script[defer]');
+        scripts.forEach(script => {
+            script.setAttribute('async', '');
+        });
+    };
+
+    // Initialize components only when needed
+    const initializeComponents = () => {
+        // Initialize tooltips only when hovering over elements with tooltips
+        document.addEventListener('mouseover', function(e) {
+            if (e.target.dataset.bsToggle === 'tooltip') {
+                new bootstrap.Tooltip(e.target);
+            }
+        }, { passive: true });
+    };
+
+    deferScripts();
+    initializeComponents();
 });

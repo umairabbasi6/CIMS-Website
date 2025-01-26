@@ -89,6 +89,9 @@ body {
     transition: transform 0.3s ease;
     height: 100%;
     position: relative;
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .campus-card:hover {
@@ -182,6 +185,9 @@ body {
     transition: transform 0.3s ease;
     height: 100%;
     position: relative;
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .facility-card:hover {
@@ -245,6 +251,102 @@ body {
     margin-top: 1rem;
 }
 
+/* Program Cards Styling */
+.program-detail-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.program-detail-card:hover {
+    transform: translateY(-5px);
+}
+
+.program-detail-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.program-overview {
+    margin-bottom: 2rem;
+}
+
+.program-overview .lead {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.specialization-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.specialization-list li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #444;
+}
+
+.specialization-list li:before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.affiliation-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.affiliation-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.affiliation-info p, .affiliation-info ul {
+    margin-bottom: 0;
+    color: #555;
+}
+
+.program-details {
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.program-details h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.program-details ul li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .program-detail-card {
+        padding: 1.5rem;
+    }
+    
+    .program-overview .lead {
+        font-size: 1rem;
+    }
+}
+
 /* Faculty Section */
 #facultyCarousel {
     position: relative;
@@ -294,36 +396,140 @@ body {
 
 .faculty-card {
     background: #fff;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    margin-bottom: 40px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .faculty-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
-.faculty-image {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 1.5rem;
+.faculty-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.faculty-card .text-muted {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.faculty-card .position {
+    color: #666;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.admin-card {
+    background: linear-gradient(to bottom right, #f8f9fa, #fff);
+    border-left: 4px solid var(--primary-color);
+}
+
+#faculty h3 {
+    color: var(--primary-color);
     position: relative;
-    overflow: hidden;
+    padding-bottom: 0.5rem;
+}
+
+#faculty h3:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.faculty-card p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .faculty-card {
+        padding: 1.25rem;
+    }
+    
+    .faculty-card h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Dean's Message Section */
+#dean-message {
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.dean-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
     border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border: 5px solid var(--primary-color);
 }
 
-.faculty-image img {
+.dean-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.faculty-card:hover .faculty-image img {
-    transform: scale(1.1);
+.dean-image:hover img {
+    transform: scale(1.05);
+}
+
+.dean-content {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+}
+
+.dean-content h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.dean-content h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.dean-content .lead {
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.dean-signature {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1.5rem;
+}
+
+.dean-signature h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
 }
 
 /* Contact Section */
@@ -344,11 +550,36 @@ body {
     border-radius: 10px;
 }
 
-/* Image Optimization */
+/* Image Loading Optimizations */
 img {
     max-width: 100%;
     height: auto;
-    loading: lazy;
+    transition: opacity 0.2s ease;
+    will-change: opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+    filter: blur(10px);
+}
+
+img.loaded {
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* Optimize animations */
+.carousel-item {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Preload animation frames */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Responsive Design */
@@ -410,34 +641,21 @@ img {
     }
 }
 
-/* Program Details Page */
-.program-detail-card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
+/* Responsive Design for Dean's Section */
+@media (max-width: 768px) {
+    .dean-image {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 2rem;
+    }
 
-.program-detail-card h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-}
+    .dean-content {
+        padding: 1.5rem;
+    }
 
-.program-info-card {
-    background: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-top: 2rem;
-}
-
-.program-info-card h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.program-info-card ul li {
-    margin-bottom: 0.5rem;
+    .dean-content h2 {
+        font-size: 1.8rem;
+    }
 }
 
 /* Footer */

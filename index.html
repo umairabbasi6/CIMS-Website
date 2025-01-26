@@ -63,16 +63,28 @@
     </div>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    
+
+    <!-- Dean's Message Section -->
+    <section id="dean-message" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">About CIMS</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Dean's Message</h3>
-                    <p>Welcome to Capital Institute of Para Medical Sciences (CIMS). Our institution is dedicated to providing quality education in the field of paramedical sciences. We strive to create healthcare professionals who will serve the community with dedication and expertise.</p>
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="dean-image">
+                        <img src="images/MD Taj.jpeg" alt="Dean/Managing Director" class="img-fluid rounded-circle" loading="eager">
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90bo1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded" alt="Professional medical educator in academic setting">
+                <div class="col-md-8">
+                    <div class="dean-content">
+                        <h2 class="mb-4">Dean's/Managing Director Message</h2>
+                        <p class="lead">Welcome to Capital Institute of Para Medical Sciences</p>
+                        <p>As the Dean/Managing Director of CIMS, I am proud to lead an institution that is dedicated to excellence in medical education and healthcare training. Our institute stands at the forefront of paramedical education, combining traditional values with modern teaching methodologies.</p>
+                        <p>At CIMS, we believe in nurturing not just skilled professionals, but compassionate healthcare providers who will make a real difference in society. Our state-of-the-art facilities, experienced faculty, and comprehensive curriculum ensure that our students receive the best possible education.</p>
+                        <div class="dean-signature mt-4">
+                            <h4>Tajammal Farooq Abbasi</h4>
+                            <p class="text-muted">Dean/Managing Director</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,89 +130,133 @@
     <!-- Faculty Section -->
     <section id="faculty" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Our Faculty</h2>
-            <div id="facultyCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="faculty-card text-center">
-                                    <div class="faculty-image">
-                                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
-                                    </div>
-                                    <h4 class="mt-3">Dr. Sarah Ahmed</h4>
-                                    <p class="text-muted">Head of Department</p>
-                                    <p>Medical Laboratory Technology</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="faculty-card text-center">
-                                    <div class="faculty-image">
-                                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
-                                    </div>
-                                    <h4 class="mt-3">Dr. Michael Khan</h4>
-                                    <p class="text-muted">Associate Professor</p>
-                                    <p>Clinical Sciences</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="faculty-card text-center">
-                                    <div class="faculty-image">
-                                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
-                                    </div>
-                                    <h4 class="mt-3">Prof. Lisa Wilson</h4>
-                                    <p class="text-muted">Assistant Professor</p>
-                                    <p>Nursing Sciences</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row g-4">
-                            <div class="col-md-4">
-                                <div class="faculty-card text-center">
-                                    <div class="faculty-image">
-                                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
-                                    </div>
-                                    <h4 class="mt-3">Dr. John Davis</h4>
-                                    <p class="text-muted">Associate Professor</p>
-                                    <p>Clinical Pathology</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="faculty-card text-center">
-                                    <div class="faculty-image">
-                                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
-                                    </div>
-                                    <h4 class="mt-3">Dr. Emma Thompson</h4>
-                                    <p class="text-muted">Assistant Professor</p>
-                                    <p>Hematology</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="faculty-card text-center">
-                                    <div class="faculty-image">
-                                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3" alt="Faculty member" class="rounded-circle">
-                                    </div>
-                                    <h4 class="mt-3">Prof. David Chen</h4>
-                                    <p class="text-muted">Associate Professor</p>
-                                    <p>Biochemistry</p>
-                                </div>
-                            </div>
-                        </div>
+            <h2 class="text-center mb-5">Our Faculty & Administration</h2>
+            
+            <!-- Teaching Faculty -->
+            <h3 class="mb-4">Teaching Faculty</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Ghazala Riaz</h4>
+                        <p class="text-muted">M.Phil-Microbiology</p>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#facultyCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#facultyCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#facultyCarousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#facultyCarousel" data-bs-slide-to="1"></button>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Noor ul Huda Raja</h4>
+                        <p class="text-muted">M.Phil-Biotechnology</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Dr. Zunaira Durrani</h4>
+                        <p class="text-muted">Pharm-D</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Dr. Qurba Naqvi</h4>
+                        <p class="text-muted">MBBS, FCPS-I</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Dr. Mudassar Hafeez</h4>
+                        <p class="text-muted">MBBS</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Larasab Khan Amazai</h4>
+                        <p class="text-muted">M.Phil-Biochemistry</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Isma Azeem</h4>
+                        <p class="text-muted">MS-Public Health</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Amir Shahzad Hashmi</h4>
+                        <p class="text-muted">M.A-Urdu</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Waqas Shams</h4>
+                        <p class="text-muted">M.A-English</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Beenish Safeer</h4>
+                        <p class="text-muted">MA-History</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Naima Gillani</h4>
+                        <p class="text-muted">BSN, Post RN</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Syeda Sehar</h4>
+                        <p class="text-muted">BSN</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Zarina Noor</h4>
+                        <p class="text-muted">LHV</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card">
+                        <h4>Tayyaba Mughal</h4>
+                        <p class="text-muted">LHV</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Administration -->
+            <h3 class="mt-5 mb-4">Administration</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="faculty-card admin-card">
+                        <h4>Tajammal Farooq Abbasi</h4>
+                        <p class="text-muted">M.Phil-Management</p>
+                        <p class="position">Managing Director</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card admin-card">
+                        <h4>Irsa Manzoor Bukhari</h4>
+                        <p class="text-muted">PhD-Scholar</p>
+                        <p class="position">Principal</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card admin-card">
+                        <h4>Lubna Ashraf</h4>
+                        <p class="text-muted">M.A English</p>
+                        <p class="position">Admin Officer</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card admin-card">
+                        <h4>Ali Babar</h4>
+                        <p class="text-muted">B.Com</p>
+                        <p class="position">Accountant</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="faculty-card admin-card">
+                        <h4>Zulqarnain Haider</h4>
+                        <p class="position">Clerk</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -213,16 +269,16 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="facility-card">
-                        <img src="https://images.unsplash.com/photo-1581093458791-4b41ce2d250a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Clinical Laboratory" class="facility-image">
+                        <img src="images/Facilities/Clinical Laboratory.jpg" alt="Clinical Laboratory" class="facility-image" loading="lazy">
                         <div class="facility-content">
                             <h3>Clinical Laboratory</h3>
-                            <p>State-of-the-art clinical testing and research facilities equipped with modern instruments and technology.</p>
+                            <p>Our advanced clinical laboratory is equipped with state-of-the-art diagnostic and research equipment, including automated analyzers, microscopes, and specialized testing instruments. Students gain hands-on experience in hematology, biochemistry, microbiology, and molecular diagnostics under expert supervision.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="facility-card">
-                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Pathology Lab" class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Pathology Lab" class="facility-image" loading="lazy">
                         <div class="facility-content">
                             <h3>Pathology Lab</h3>
                             <p>Modern pathology and diagnostic equipment for comprehensive medical testing and analysis.</p>
@@ -231,7 +287,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="facility-card">
-                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Operation Theater" class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Operation Theater" class="facility-image" loading="lazy">
                         <div class="facility-content">
                             <h3>Operation Theater</h3>
                             <p>Well-equipped operation theater for practical training and surgical procedures.</p>
@@ -240,7 +296,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="facility-card">
-                        <img src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Computer Lab" class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Computer Lab" class="facility-image" loading="lazy">
                         <div class="facility-content">
                             <h3>Computer Lab</h3>
                             <p>Modern computer laboratory with latest software for medical research and data analysis.</p>
@@ -249,7 +305,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="facility-card">
-                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Library" class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Library" class="facility-image" loading="lazy">
                         <div class="facility-content">
                             <h3>Library</h3>
                             <p>Extensive collection of medical books, journals, and digital resources for research and study.</p>
@@ -258,7 +314,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="facility-card">
-                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Smart Classrooms" class="facility-image">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Smart Classrooms" class="facility-image" loading="lazy">
                         <div class="facility-content">
                             <h3>Smart Classrooms</h3>
                             <p>Technology-enabled classrooms for interactive learning and digital education.</p>
@@ -279,7 +335,7 @@
                         <div class="row g-4">
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 1.jpg" alt="Campus Life">
+                                    <img src="images/campus life 1.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Student Activities</h4>
                                         <p>Engaging in various extracurricular activities</p>
@@ -288,7 +344,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 2.jpg" alt="Campus Life">
+                                    <img src="images/campus life 2.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Sports Events</h4>
                                         <p>Regular sports competitions and fitness activities</p>
@@ -297,7 +353,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 3.jpg" alt="Campus Life">
+                                    <img src="images/campus life 3.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Cultural Events</h4>
                                         <p>Celebrating diversity through cultural programs</p>
@@ -310,7 +366,7 @@
                         <div class="row g-4">
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 4.jpg" alt="Campus Life">
+                                    <img src="images/campus life 4.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Workshops</h4>
                                         <p>Regular skill development workshops</p>
@@ -319,7 +375,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 5.jpg" alt="Campus Life">
+                                    <img src="images/campus life 5.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Seminars</h4>
                                         <p>Expert talks and educational seminars</p>
@@ -328,7 +384,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 6.jpg" alt="Campus Life">
+                                    <img src="images/campus life 6.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Community Service</h4>
                                         <p>Giving back to the community</p>
@@ -341,7 +397,7 @@
                         <div class="row g-4">
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 7.jpg" alt="Campus Life">
+                                    <img src="images/campus life 7.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Research Activities</h4>
                                         <p>Hands-on research experience</p>
@@ -350,7 +406,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 8.jpg" alt="Campus Life">
+                                    <img src="images/campus life 8.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Laboratory Work</h4>
                                         <p>Practical laboratory sessions</p>
@@ -359,7 +415,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 9.jpg" alt="Campus Life">
+                                    <img src="images/campus life 9.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Guest Lectures</h4>
                                         <p>Learning from industry experts</p>
@@ -372,7 +428,7 @@
                         <div class="row g-4">
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 10.jpg" alt="Campus Life">
+                                    <img src="images/campus life 10.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Student Projects</h4>
                                         <p>Innovative student initiatives</p>
@@ -381,7 +437,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 11.jpg" alt="Campus Life">
+                                    <img src="images/campus life 11.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Campus Events</h4>
                                         <p>Engaging campus activities</p>
@@ -390,7 +446,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="campus-card">
-                                    <img src="images/campus life 12.jpg" alt="Campus Life">
+                                    <img src="images/campus life 12.jpg" alt="Campus Life" loading="lazy">
                                     <div class="campus-content">
                                         <h4>Student Life</h4>
                                         <p>Daily life at CIMS</p>
