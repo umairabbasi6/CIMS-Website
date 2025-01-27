@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form - CIMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">CIMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="programs.html">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="admission.html">Admission</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admission Form Section -->
+    <section id="admission-form" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Admission Application Form</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card admission-card">
+                        <div class="card-body">
+                            <form id="admissionForm" class="needs-validation" action="https://formspree.io/f/mbldgjrl" method="POST" novalidate>
+                                <!-- Personal Information -->
+                                <h4 class="section-title">Personal Information</h4>
+                                <div class="row mb-4">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name*</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name*</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="dateOfBirth" class="form-label">Date of Birth*</label>
+                                        <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="gender" class="form-label">Gender*</label>
+                                        <select class="form-select" id="gender" name="gender" required>
+                                            <option value="">Select Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Contact Information -->
+                                <h4 class="section-title">Contact Information</h4>
+                                <div class="row mb-4">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" name="email">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Phone Number*</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="whatsapp" class="form-label">WhatsApp Number*</label>
+                                        <input type="tel" class="form-control" id="whatsapp" name="whatsapp" required>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="address" class="form-label">Address*</label>
+                                        <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Program Selection -->
+                                <h4 class="section-title">Program Selection</h4>
+                                <div class="row mb-4">
+                                    <div class="col-12 mb-3">
+                                        <label for="department" class="form-label">Select Department*</label>
+                                        <select class="form-select" id="department" name="department" required>
+                                            <option value="">Choose Department</option>
+                                            <option value="fsc">FSc Medical Technology</option>
+                                            <option value="bs">BS Medical & Allied Health Sciences</option>
+                                            <option value="nursing">Nursing Programs</option>
+                                            <option value="diploma">Diploma Programs</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label for="program" class="form-label">Select Program*</label>
+                                        <select class="form-select" id="program" name="program" required disabled>
+                                            <option value="">First Select Department</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Educational Background -->
+                                <h4 class="section-title">Educational Background</h4>
+                                <div class="row mb-4">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastDegree" class="form-label">Last Degree*</label>
+                                        <input type="text" class="form-control" id="lastDegree" name="lastDegree" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="passingYear" class="form-label">Passing Year*</label>
+                                        <input type="number" class="form-control" id="passingYear" name="passingYear" min="2000" max="2024" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="institution" class="form-label">Institution*</label>
+                                        <input type="text" class="form-control" id="institution" name="institution" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="percentage" class="form-label">Percentage/CGPA*</label>
+                                        <input type="number" class="form-control" id="percentage" name="percentage" min="0" max="100" step="0.01" required>
+                                    </div>
+                                    <!-- Optional Education -->
+                                    <div class="col-12">
+                                        <div class="optional-education mt-3">
+                                            <h5>Additional Education (Optional)</h5>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="additionalDegree" class="form-label">Degree/Certification</label>
+                                                    <input type="text" class="form-control" id="additionalDegree" name="additionalDegree">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="additionalPassingYear" class="form-label">Passing Year</label>
+                                                    <input type="number" class="form-control" id="additionalPassingYear" name="additionalPassingYear" min="2000" max="2024">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="additionalInstitution" class="form-label">Institution</label>
+                                                    <input type="text" class="form-control" id="additionalInstitution" name="additionalInstitution">
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="additionalPercentage" class="form-label">Percentage/CGPA</label>
+                                                    <input type="number" class="form-control" id="additionalPercentage" name="additionalPercentage" min="0" max="100" step="0.01">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Required Documents -->
+                                <h4 class="section-title">Required Documents</h4>
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <div class="alert alert-info">
+                                            <h6 class="mb-3">Please bring the following documents when you visit our campus:</h6>
+                                            <ul class="mb-0">
+                                                <li>Matric Certificate/Result Card (Original & Copy)</li>
+                                                <li>Intermediate Certificate/Result Card (Original & Copy)</li>
+                                                <li>Character Certificate</li>
+                                                <li>Domicile Certificate</li>
+                                                <li>CNIC/Form-B (Original & Copy)</li>
+                                                <li>Passport Size Photographs (4)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Declaration -->
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="declaration" name="declaration" required>
+                                        <label class="form-check-label" for="declaration">
+                                            I declare that all the information provided above is true and correct to the best of my knowledge.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h5>Capital Institute of Para Medical Sciences</h5>
+                    <p>Providing quality education in medical sciences since establishment.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Follow Us</h5>
+                    <a href="https://www.facebook.com/cimsmzd/" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@cims.edu.pk</p>
+                    <p>Phone: +92 345 3380881</p>
+                    <p>Address: CIMS Campus, Muzaffrabad Azad Kashmir</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="fee-structure.html">Fee Structure</a></li>
+                        <li><a href="admission.html">Admission</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <hr class="my-3">
+                    <p class="mb-0">&copy; 2025 CIMS. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>

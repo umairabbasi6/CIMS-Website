@@ -46,15 +46,71 @@ facultyCards.forEach(card => {
     });
 });
 
-// Form submission handling
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your message. We will get back to you soon!');
-        this.reset();
-    });
+// Form submission handler
+async function submitForm(formData, formType) {
+    try {
+        const response = await fetch('send_email.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ ...formData, formType }),
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+            Swal.fire({
+                title: 'Success!',
+                text: formType === 'admission' ? 
+                    'Your application has been submitted successfully. We will contact you soon.' :
+                    'Your message has been sent successfully. We will get back to you soon.',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                confirmButtonColor: '#0d6efd'
+            });
+            return true;
+        } else {
+            throw new Error(result.message || 'Failed to submit form');
+        }
+    } catch (error) {
+        console.error('Form submission error:', error);
+        Swal.fire({
+            title: 'Error!',
+            text: 'There was a problem submitting the form. Please try again later.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#dc3545'
+        });
+        return false;
+    }
 }
+
+// Form validation and submission
+document.addEventListener('DOMContentLoaded', function() {
+    // Contact Form
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+                this.classList.add('was-validated');
+                return;
+            }
+
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Sending...';
+
+            // Re-enable button after submission
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Send Message';
+            }, 2000);
+        });
+    }
+});
 
 // Program cards link handling
 const programCards = document.querySelectorAll('.program-card');
@@ -164,4 +220,131 @@ document.addEventListener('DOMContentLoaded', function() {
 
     deferScripts();
     initializeComponents();
+});
+
+// Program selection logic
+document.addEventListener('DOMContentLoaded', function() {
+    const departmentSelect = document.getElementById('department');
+    const programSelect = document.getElementById('program');
+
+    if (departmentSelect && programSelect) {
+        const programsByDepartment = {
+            fsc: [
+                'Medical Lab Technology (MLT)',
+                'Operation Theatre Technology (OTT)',
+                'X-Ray Technology',
+                'Dental Hygiene Technology',
+                'Dispensing Technology',
+                'Cardiac Technology'
+            ],
+            bs: [
+                'Medical Laboratory Sciences',
+                'Operation Theatre Technology',
+                'Medical Imaging Technology',
+                'Emergency Medical Technology',
+                'Anaesthesia Technology'
+            ],
+            nursing: [
+                'Lady Health Visitor (LHV)',
+                'Certified Nursing Assistant (CNA)',
+                'Mid-Wifery'
+            ],
+            diploma: [
+                'Dispenser',
+                'Medical Lab Technology (MLT)',
+                'Operation Theatre Technology (OT)'
+            ]
+        };
+
+        departmentSelect.addEventListener('change', function() {
+            programSelect.disabled = false;
+            programSelect.innerHTML = '<option value="">Select Program</option>';
+            
+            const selectedDepartment = this.value;
+            if (selectedDepartment && programsByDepartment[selectedDepartment]) {
+                programsByDepartment[selectedDepartment].forEach(program => {
+                    const option = document.createElement('option');
+                    option.value = program;
+                    option.textContent = program;
+                    programSelect.appendChild(option);
+                });
+            } else {
+                programSelect.disabled = true;
+                programSelect.innerHTML = '<option value="">First Select Department</option>';
+            }
+        });
+    }
+
+    // Contact Form
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+                this.classList.add('was-validated');
+                return;
+            }
+
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Sending...';
+
+            // Re-enable button after submission
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Send Message';
+            }, 2000);
+        });
+    }
+
+    // Admission Form
+    const admissionForm = document.getElementById('admissionForm');
+    if (admissionForm) {
+        admissionForm.addEventListener('submit', function(event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+                this.classList.add('was-validated');
+                return;
+            }
+
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Submitting...';
+
+            // Re-enable button after submission
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Submit Application';
+            }, 2000);
+        });
+    }
+});
+
+// Contact form handling
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Don't prevent default as we want the form to submit to Formspree
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Sending...';
+
+            // After 2 seconds, show success message
+            setTimeout(() => {
+                Swal.fire({
+                    title: 'Message Sent!',
+                    text: 'Thank you for your message. We will get back to you soon.',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#0d6efd'
+                }).then(() => {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Send Message';
+                });
+            }, 2000);
+        });
+    }
 });

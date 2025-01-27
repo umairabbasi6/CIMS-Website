@@ -179,52 +179,48 @@ body {
 /* Facilities Section */
 .facility-card {
     background: #fff;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     height: 100%;
-    position: relative;
-    transform: translateZ(0);
-    will-change: transform;
-    backface-visibility: hidden;
 }
 
 .facility-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
-.facility-image {
+.facility-card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.facility-card:hover .facility-image {
-    transform: scale(1.1);
 }
 
 .facility-content {
     padding: 1.5rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: white;
+    text-align: center;
 }
 
-.facility-content h3 {
-    font-size: 1.5rem;
+.facility-content h4 {
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
-    color: white;
+    font-size: 1.2rem;
 }
 
 .facility-content p {
+    color: #666;
     margin-bottom: 0;
     font-size: 0.9rem;
-    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .facility-card img {
+        height: 200px;
+    }
+    
+    .facility-content {
+        padding: 1rem;
+    }
 }
 
 /* Programs Section */
@@ -404,6 +400,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
 .faculty-card:hover {
@@ -439,6 +436,7 @@ body {
     color: var(--primary-color);
     position: relative;
     padding-bottom: 0.5rem;
+    margin-left: 1rem;
 }
 
 #faculty h3:after {
@@ -463,6 +461,25 @@ body {
     .faculty-card h4 {
         font-size: 1rem;
     }
+}
+
+.qualification-title {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    text-align: center;
+}
+
+.faculty-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faculty-group .faculty-card {
+    margin-bottom: 0;
 }
 
 /* Dean's Message Section */
@@ -548,6 +565,71 @@ body {
     background: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
+}
+
+/* Admission Form Styles */
+.admission-card {
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.admission-card .card-body {
+    padding: 2rem;
+}
+
+.section-title {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.form-label {
+    font-weight: 500;
+    color: #444;
+}
+
+.form-control, .form-select {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-rgb), 0.25);
+}
+
+.btn-primary {
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Program Card Apply Button */
+.program-card .apply-btn {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.program-card .apply-btn:hover {
+    transform: translateY(-2px);
+    background-color: #0056b3;
 }
 
 /* Image Loading Optimizations */
