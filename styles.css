@@ -845,6 +845,53 @@ img.loaded {
     }
 }
 
+/* Fee Structure Table Styles */
+.fee-table {
+    border: 2px solid #dee2e6;
+    margin-bottom: 2rem;
+}
+
+.fee-table thead th {
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.fee-table tbody td {
+    border: 2px solid #dee2e6;
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+.fee-table tbody td:first-child {
+    background-color: #f8f9fa;
+    font-weight: 500;
+}
+
+.program-section {
+    padding: 2rem 0;
+}
+
+.program-section .section-title {
+    color: #007bff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .fee-table {
+        font-size: 0.9rem;
+    }
+    
+    .fee-table tbody td {
+        padding: 0.5rem;
+    }
+}
+
 /* Footer */
 footer {
     margin-top: 2rem;
